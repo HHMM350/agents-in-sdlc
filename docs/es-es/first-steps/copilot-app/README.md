@@ -1,13 +1,13 @@
 ---
-title: "Recorrido por la aplicación GitHub Copilot"
-description: "Realiza un recorrido guiado por la aplicación GitHub Copilot creando y entregando un Space Quiz."
+title: "Recorrido por la aplicación de GitHub Copilot"
+description: "Realiza un recorrido guiado por la aplicación de GitHub Copilot creando y entregando un Space Quiz."
 slug: es-es/first-steps/copilot-app
 authors:
   - jamesmontemagno
 lastUpdated: 2026-10-12
 ---
 
-Realiza un recorrido práctico por la aplicación GitHub Copilot, pensado para principiantes. Crearás un Space Quiz lleno de color desde una carpeta vacía y recorrerás todo el ciclo de desarrollo, desde el primer prompt hasta una solicitud de incorporación de cambios revisada y un sitio publicado en GitHub Pages.
+Realiza un recorrido práctico por la aplicación de GitHub Copilot, pensado para principiantes. Crearás un Space Quiz lleno de color desde una carpeta vacía y recorrerás todo el ciclo de desarrollo, desde el primer prompt hasta una solicitud de incorporación de cambios revisada y un sitio publicado en GitHub Pages.
 
 El taller dura aproximadamente entre 60 y 90 minutos. El proyecto utiliza un único archivo HTML sin dependencias de ejecución, así que puedes centrarte en aprender a usar la aplicación y sus flujos de trabajo con agentes.
 

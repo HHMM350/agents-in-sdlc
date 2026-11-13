@@ -3,100 +3,99 @@ title: "第 1 课 - 安装 GitHub Copilot app"
 description: "安装 GitHub Copilot app，连接通过模板创建的存储库，熟悉工作区并尝试快速聊天。"
 authors:
   - geektrainer
-lastUpdated: 2026-10-05
+lastUpdated: 2026-10-22
 ---
 
-[**GitHub Copilot app**][about-copilot-app] 是一款用于智能体驱动开发的桌面应用。它基于 GitHub Copilot CLI 构建，并与 GitHub 原生集成，因此存储库、分支和 CI 管道均可直接使用。它适用于同时指挥多个智能体的工作流：每个智能体都在隔离的工作区中运行，无需手动完成所有工作，还可自动执行重复性任务。安装 Node.js 并准备好项目副本后，下一步是安装应用并连接该存储库。
+**[GitHub Copilot app][about-copilot-app]** 是一款用于智能体驱动开发的桌面应用，基于 GitHub Copilot CLI 构建并与 GitHub 原生集成，因此存储库、分支和 CI 管道开箱即用。它面向由你指挥多个智能体并行工作的流程，每个智能体都在独立工作区中运行，而不是由你亲自完成所有工作；它还可以自动处理重复任务。安装好 Node.js 并准备好项目副本后，接下来安装应用并连接该存储库。
 
-本课将介绍如何：
+本课将：
 
 - 安装 GitHub Copilot app 并登录。
 - 从 GitHub 存储库将项目添加到应用。
-- 熟悉工作区，包括模板创建的待办事项。
-- 通过快速聊天了解应用本身。
+- 熟悉工作区，包括模板为你创建的待办事项。
+- 尝试快速聊天，了解应用本身。
 
 ## 场景
 
-团队正在采用 AI 智能体来处理不断增加的待办事项。Copilot app 提供了统一的工作位置，可领取议题、运行智能体、审查更改并合并拉取请求。本课将帮助你完成安装和连接，并熟悉如何发起有关项目的对话。
+你的团队正在使用 AI 智能体处理不断增长的待办事项。Copilot app 提供统一的工作区来指挥这些工作，包括认领议题、运行智能体、审查更改和合并拉取请求。本课将指导你安装应用、连接项目，并开始针对项目进行对话。
 
 > [!NOTE]
-> 必须拥有符合条件的 Copilot 计划，即 Copilot Student 或任一付费计划（Pro、Pro+、Business 或 Enterprise）。如果使用 Copilot Business 或 Copilot Enterprise，管理员必须先启用 **Copilot CLI** 策略，应用才能工作。
+> 需要符合条件的 Copilot 计划：Copilot Free、Copilot Student 或任何付费计划（Pro、Pro+、Business 或 Enterprise）。如果使用 Copilot Business 或 Copilot Enterprise，管理员必须保持 **GitHub Copilot app** 策略启用。
 
 ## 安装并配置 GitHub Copilot app
 
-要使用 GitHub Copilot app，第一步自然是安装它。应用支持 Windows、macOS 和 Linux。接下来安装应用、完成身份验证，并将 Tailspin Toys 存储库添加到应用。
+要使用 GitHub Copilot app，首先需要安装应用。Windows、macOS 和 Linux 均提供相应版本。现在安装应用、完成身份验证，并将 Tailspin Toys 存储库添加到应用。
 
-1. 在浏览器中打开 [GitHub Copilot app 产品页面][download-app]。
-2. 下载适用于当前平台的应用，并按照产品页面上的说明进行安装。
+1. 在浏览器中打开 [GitHub Copilot app 主页][download-app]。
+2. 下载适用于当前平台的应用，并按主页提供的说明安装。
 3. 安装完成后打开应用。
-4. 选择 **Sign in to GitHub**，并按照提示完成身份验证。如果使用 GitHub Enterprise Server，请选择 **Use GitHub Enterprise**，并在提示时输入服务器地址。
-5. 身份验证后，系统会询问要连接哪些存储库。选择刚创建的 Tailspin Toys 存储库，其名称应为 `<YOUR_GITHUB_HANDLE>/tailspin-toys`。
-6. 选择 **Continue** 继续加入流程。
-7. 系统提示选择主题时，选择最喜欢的主题，再选择 **Finish**。
-
-> [!NOTE]
-> 如果 Tailspin Toys 副本未自动显示在列表中，可以在应用中完成加入流程后再添加。完成后，Copilot app 会转到主屏幕。在该屏幕选择 **Choose from GitHub**，按名称搜索存储库 (\<YOUR_GITHUB_HANDLE\>/tailspin-toys)，然后将其选中。该存储库随即会添加到 Copilot app。
+4. 选择 **Sign in to GitHub** 并按提示完成身份验证。如果使用具有数据驻留功能的 GitHub Enterprise Cloud，请选择 **Use GitHub Enterprise**，并在提示时输入 `*.ghe.com` 主机名。GitHub Enterprise Server 不受支持。
+5. 如果引导流程提供存储库选择，请选择从模板创建的 Tailspin Toys 存储库。也可以跳过存储库选择，并在完成引导后添加项目。
+6. 如果系统提示，请选择主题并完成引导。
+7. 在侧边栏的 **Sessions** 下查找存储库。如果已经列出，就无需再次添加。
+8. 如果尚未连接存储库，请选择 **Sessions** 旁边的 **+** 创建新会话，然后选择 **Add GitHub repository**。输入先决条件课程中记录的所有者和存储库名称。
+9. 确认存储库显示在侧边栏中。此处采用的界面布局会将 `tailspin-toys` 等存储库文件夹归在 **Sessions** 下，每个存储库下方列出单独的会话。
 
 ## 熟悉工作区
 
-连接项目后，花一点时间熟悉工作区。应用将功能组织在侧边栏的以下几个区域：
+项目连接后，先熟悉应用。侧边栏中的几个区域用于组织工作：
 
-- **New**：顾名思义，可以在这里启动与 Copilot 的新聊天会话。
-- **Pull requests**：通过应用与 GitHub 的原生集成显示拉取请求。在这里，无需离开应用即可浏览和筛选拉取请求、检查 CI 状态以及审查拉取请求。
-- **Issues**：以同样的方式显示议题。在这里，可以浏览和筛选议题，并从议题启动会话。
-- **Automations**：可按计划或按需运行的已保存智能体任务。适合管理待办事项、定期维护项目，或处理其他重复性工作。总结课程会将其作为后续方向提供链接，而不再添加工作坊练习。
-- **Customize**：通过 MCP 服务器、插件、技能和其他组件，为 Copilot app 添加功能。你将使用它配置 Playwright MCP。
-- **Chats**：适合提问和集思广益的轻量对话，无需单独创建分支或工作区。本课结束时会进行一次快速聊天。
-- **Sessions**：智能体执行工作的区域。每个会话都在独立工作区中运行，因此可以同时运行多个会话，且更改不会发生冲突。下一课将启动第一个会话。
+- **New**：从此处开始与 Copilot 的新聊天会话。
+- **Pull requests**：通过应用内置的 GitHub 集成查看拉取请求。可以浏览和筛选 PR、检查 CI 状态并审查 PR，无需离开应用。
+- **Issues**：以相同方式查看议题。可以浏览和筛选议题，并从议题启动会话。
+- **Automations**：保存按计划或按需运行的智能体任务。适合管理待办事项清单、定期项目维护或其他希望委托处理的繁琐工作。总结课程会将其作为后续探索内容，而非另一项研讨会练习。
+- **Customize**：添加 MCP 服务器、插件、技能和其他组件，扩展 Copilot app 的功能。之后会在此处配置 Playwright MCP。
+- **Chats**：用于提问和头脑风暴的轻量对话，无需专属分支或工作区。首次开始聊天后，此区域才会显示。如果未显示，请选择 **Sessions** 旁边的 **+**，开始第一次聊天。
+- **Sessions**：按存储库文件夹组织智能体会话。选择存储库名称（例如 `tailspin-toys`）可打开存储库视图；选择存储库下方的会话可返回对应对话。每个会话都在独立工作区运行，因此可以同时运行多个会话且不会相互覆盖。添加星级评分时将启动第一个会话。
 
-在完成工作坊的过程中，你将逐步探索工作区。
+随着研讨会继续，你会逐步了解整个工作区！
 
 > [!TIP]
-> 有疑问就问 Copilot！如果不确定如何操作，或某件事是否可行，可以向 Copilot 提问，让它提供指导。
+> 不确定时，可以直接询问 Copilot！如果不清楚某项操作或是否可行，可以请 Copilot 帮忙指导。
 
-### 查找模板创建的待办事项
+### 查找预置的待办事项
 
-几乎每个项目都有待办事项，Tailspin Toys 也不例外。下面探索通过模板创建项目时生成的待办事项。
+几乎每个项目都有待办事项，Tailspin Toys 也不例外。现在查看创建模板时自动生成的待办事项。
 
-1. 在侧边栏中选择 **Issues**。
-2. 按标题查找以下议题，不要假设议题编号：
+1. 在侧边栏的 **Sessions** 下选择 Tailspin Toys 存储库文件夹（不要选择其下方的单个会话），然后在存储库顶部导航中选择 **Issues**。
+2. 根据标题查找以下议题，不要假定它们的议题编号：
 
    - Allow users to filter games by category and publisher
    - Update our repository coding standards
 
-3. 选择一个议题以阅读详细信息。每个议题也可以作为智能体会话的启动点。完成一项快速的首次更改后，你将从筛选功能议题启动会话。
+3. 选择议题并阅读详情。每个议题也都可以作为启动智能体会话的入口。完成第一个小更改后，将从筛选议题开始工作。
 
 > [!NOTE]
-> **Issues** 和 **Pull requests** 中的项目会自动筛选，仅显示已添加到 Copilot app 的存储库中的项目。要查看其他存储库中的工作项，请将相应存储库添加到应用。
+> **Issues** 和 **Pull requests** 中的列表会自动筛选，仅显示已添加到 Copilot app 的存储库中的事项。若要查看其他存储库中的工作项，请将那些存储库也添加到应用。
 
 ## 尝试快速聊天
 
-熟悉应用的一种好方法是用它来了解*应用本身*，而**快速聊天**正适合这种场景。通过快速聊天，无需创建分支或工作树即可提问或集思广益，非常适合无需会话的一次性问题。
+熟悉应用的好方法之一，就是向它询问有关**应用本身**的问题；**快速聊天**正适合此用途。快速聊天可以提问或头脑风暴，而不会创建分支或工作树，适合快速、一次性的问题，无需创建会话。
 
-1. 在侧边栏中，选择 **Chats** 旁的 **+** 以打开新聊天。
-2. 询问应用自身的会话工作方式：
+1. 在侧边栏中选择 **Chats** 旁边的 **+**，开始新聊天。如果 **Chats** 尚未显示，请选择 **Sessions** 旁边的 **+** 开始第一次聊天；之后就会显示 **Chats**。
+2. 询问应用自身如何管理会话：
 
    ```plaintext
    How does the GitHub Copilot app use worktrees?
    ```
 
-3. 在对话视图中阅读回复。每个会话都在独立的 git 工作树中运行，因此可以并行运行多个智能体，而不会造成更改冲突。你可以随时继续对话或开始新聊天。
+3. 在对话视图中阅读回复。你会了解到，每个会话都在独立的 Git 工作树中运行，因此可以并行运行多个智能体而不会相互覆盖。可以随时继续对话或开始新聊天。
 
 ## 总结与后续步骤
 
-你已安装 GitHub Copilot app、连接项目并探索工作区。你学习了如何：
+恭喜！你已安装 GitHub Copilot app、连接项目并熟悉工作区。你了解了如何：
 
 - 安装应用并登录 GitHub。
 - 从 GitHub 存储库添加项目。
-- 熟悉工作区，并在 **Issues** 中找到模板创建的待办事项。
-- 使用快速聊天提出一次性问题。
+- 熟悉工作区并在 **Issues** 中查找预置的待办事项。
+- 使用快速聊天提出快速、一次性的问题。
 
-接下来，你将[启动第一个智能体会话][next-lesson]，并用它在游戏卡片上显示星级评分。
+接下来，[启动第一个智能体会话][next-lesson]，让它在游戏卡片上显示星级评分。
 
 ## 资源
 
 - [关于 GitHub Copilot app][about-copilot-app]
-- [GitHub Copilot app 入门][getting-started]
+- [开始使用 GitHub Copilot app][getting-started]
 - [在 GitHub Copilot app 中使用智能体会话][agent-sessions]
 
 [next-lesson]: ../2-add-star-rating/
